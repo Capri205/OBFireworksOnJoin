@@ -1,0 +1,15 @@
+{
+  "website": "http://ob-mc.net", 
+  "commands": {
+    "mw": {
+      "usage": "none", 
+      "description": "Spigot/Bukkit plugin to launch fireworks when a player joins the server.", 
+      "aliases": []
+    }
+  }, 
+  "version": "0.1",
+  "api-version": "1.13", 
+  "name": "OBFireworksOnJoin", 
+  "author": "Fahrenheit451", 
+  "main": "net.obmc.OBFireworksOnJoin.OBFireworksOnJoin"
+}
