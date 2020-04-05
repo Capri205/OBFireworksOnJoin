@@ -1,61 +1,44 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+
   <groupId>net.obmc</groupId>
   <artifactId>OBFireworksOnJoin</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0</version>
+  <packaging>jar</packaging>
   <name>OBFireworksOnJoin</name>
-  <description>Let off fireworks when player joins</description>
+  <description>Let off some fireworks when player joins</description>
   
-  	<build>
-		<defaultGoal>clean compile install</defaultGoal>
-		<finalName>OBFireworksOnJoin</finalName>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-shade-plugin</artifactId>
-				<version>1.4</version>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>shade</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.0.2</version>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-source-plugin</artifactId>
-				<version>2.2.1</version>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>2.9.1</version>
-				<configuration>
-					<show>public</show>
-					<windowtitle>OBFireworksOnJoin</windowtitle>
-					<verbose>false</verbose>
-					<author>true</author>
-					<version>true</version>
-					<linksource>true</linksource>
-					<notimestamp>true</notimestamp>
-					<bottom><![CDATA[<b>moomaxie, 2015</b>]]></bottom>
-					<reportOutputDirectory>${project.build.directory}</reportOutputDirectory>
-					<destDir>javadoc-latest</destDir>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
+  <build>
+  
+	<finalName>OBFireworksOnJoin</finalName>
+ 
+    <resources>
+      <resource>
+        <targetPath>.</targetPath>
+        <filtering>true</filtering>
+        <directory>${basedir}/src/main/resources/</directory>
+        <includes>
+          <include>*.yml</include>
+        </includes>
+      </resource>
+    </resources>
+
+    <plugins>
+    	<plugin>
+        	<groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.7.0</version>
+            <configuration>
+            	<source>1.8</source>
+            	<target>1.8</target>
+            </configuration>
+        </plugin>
+    </plugins>
+  </build>
 
 	<repositories>
 		<repository>
