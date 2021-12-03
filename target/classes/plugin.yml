@@ -8,7 +8,7 @@
     }
   }, 
   "version": "0.1",
-  "api-version": "1.17", 
+  "api-version": "1.18", 
   "name": "OBFireworksOnJoin", 
   "author": "Fahrenheit451", 
   "main": "net.obmc.OBFireworksOnJoin.OBFireworksOnJoin"
